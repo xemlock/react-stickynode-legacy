@@ -9,8 +9,7 @@
 import React, {Component, PropTypes} from 'react';
 
 import {subscribe} from 'subscribe-ui-event';
-import classNames from 'classnames';
-import shallowCompare from 'react-addons-shallow-compare';
+import shallowEqual from 'react/lib/shallowEqual'
 
 // constants
 const STATUS_ORIGINAL = 0; // The default status, locating at the original position.
@@ -132,7 +131,8 @@ class Sticky extends Component {
     updateInitialDimension (options) {
         options = options || {}
 
-        var {outer, inner} = this.refs;
+        var outer = React.findDOMNode(this.refs.outer)
+        var inner = React.findDOMNode(this.refs.inner)
 
         var outerRect = outer.getBoundingClientRect();
         var innerRect = inner.getBoundingClientRect();
@@ -325,7 +325,7 @@ class Sticky extends Component {
             winHeight = win.innerHeight || docEl.clientHeight;
             M = window.Modernizr;
             // No Sticky on lower-end browser when no Modernizr
-            if (M) {
+            if (M && M.prefixed) {
                 canEnableTransforms = M.csstransforms3d;
                 TRANSFORM_PROP = M.prefixed('transform');
             }
@@ -357,7 +357,9 @@ class Sticky extends Component {
     }
 
     shouldComponentUpdate (nextProps, nextState) {
-        return !this.props.shouldFreeze() && shallowCompare(this, nextProps, nextState);
+        return !this.props.shouldFreeze() && (
+            !shallowEqual(this.props, nextProps) || !shallowEqual(this.state, nextState)
+        )
     }
 
     render () {
@@ -376,10 +378,10 @@ class Sticky extends Component {
             outerStyle.height = this.state.height + 'px';
         }
 
-        var outerClasses = classNames('sticky-outer-wrapper', this.props.className, {
-            [this.props.activeClass]: this.state.status === STATUS_FIXED,
-            [this.props.releasedClass]: this.state.status === STATUS_RELEASED
-        })
+        var outerClasses = ['sticky-outer-wrapper']
+          .concat(this.props.className ? this.props.className : [])
+          .concat(this.state.status === STATUS_FIXED ? this.props.activeClass : [])
+          .concat(this.state.status === STATUS_RELEASED ? this.props.releasedClass : [])
 
         return (
             <div ref='outer' className={outerClasses} style={outerStyle}>

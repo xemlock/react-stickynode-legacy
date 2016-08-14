@@ -1,7 +1,7 @@
 {
-  "name": "react-stickynode",
+  "name": "react-stickynode-legacy",
   "version": "1.2.1",
-  "description": "A performant and comprehensive React sticky",
+  "description": "A performant and comprehensive sticky component for React 0.13.x",
   "main": "index.js",
   "scripts": {
     "build": "grunt dist",
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/yahoo/react-stickynode"
+    "url": "https://github.com/xemlock/react-stickynode-legacy"
   },
   "keywords": [
     "Sticky",
@@ -30,8 +30,6 @@
     }
   ],
   "dependencies": {
-    "classnames": "^2.0.0",
-    "react-addons-shallow-compare": "^0.14.2 || ^15.0.0",
     "subscribe-ui-event": "^1.0.0"
   },
   "devDependencies": {
@@ -55,20 +53,16 @@
     "grunt-webpack": "^1.0.8",
     "istanbul": "^0.4.0",
     "jsdom": "^8.0.0",
-    "jsx-test": "^1.0.0",
     "minimist": "^1.2.0",
     "mocha": "^2.0",
     "mockery": "^1.4.0",
     "pre-commit": "^1.0.0",
-    "react": "^0.14.2 || ^15.0.0",
-    "react-addons-test-utils": "^0.14.2 || ^15.0.0",
-    "react-dom": "^0.14.2 || ^15.0.0",
+    "react": "^0.13.0",
     "sinon": "^1.17.3",
     "xunit-file": "~0.0.9"
   },
   "peerDependencies": {
-    "react": "^0.14.2 || ^15.0.0",
-    "react-dom": "^0.14.2 || ^15.0.0"
+    "react": "^0.13.0"
   },
   "precommit": [
     "lint",
