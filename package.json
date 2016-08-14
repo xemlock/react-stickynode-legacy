@@ -1,6 +1,6 @@
 {
   "name": "react-stickynode-legacy",
-  "version": "1.2.1",
+  "version": "0.1.0",
   "description": "A performant and comprehensive sticky component for React 0.13.x",
   "main": "index.js",
   "scripts": {
