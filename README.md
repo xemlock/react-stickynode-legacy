@@ -1,5 +1,5 @@
 # react-stickynode-legacy
-[![npm version](https://badge.fury.io/js/react-stickynode.svg)](http://badge.fury.io/js/react-stickynode)
+[![npm version](https://badge.fury.io/js/react-stickynode-legacy.svg)](http://badge.fury.io/js/react-stickynode-legacy)
 [![Build Status](https://travis-ci.org/xemlock/react-stickynode-legacy.svg?branch=master)](https://travis-ci.org/xemlock/react-stickynode-legacy)
 [![Coverage Status](https://coveralls.io/repos/xemlock/react-stickynode-legacy/badge.svg)](https://coveralls.io/r/xemlock/react-stickynode-legacy)
 [![Dependency Status](https://david-dm.org/xemlock/react-stickynode-legacy.svg)](https://david-dm.org/xemlock/react-stickynode-legacy)
