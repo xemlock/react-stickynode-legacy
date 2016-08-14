@@ -1,9 +1,9 @@
-# react-stickynode
+# react-stickynode-legacy
 [![npm version](https://badge.fury.io/js/react-stickynode.svg)](http://badge.fury.io/js/react-stickynode)
-[![Build Status](https://travis-ci.org/yahoo/react-stickynode.svg?branch=master)](https://travis-ci.org/yahoo/react-stickynode)
-[![Coverage Status](https://coveralls.io/repos/yahoo/react-stickynode/badge.svg)](https://coveralls.io/r/yahoo/react-stickynode)
-[![Dependency Status](https://david-dm.org/yahoo/react-stickynode.svg)](https://david-dm.org/yahoo/react-stickynode)
-[![devDependency Status](https://david-dm.org/yahoo/react-stickynode/dev-status.svg)](https://david-dm.org/yahoo/react-stickynode#info=devDependencies)
+[![Build Status](https://travis-ci.org/xemlock/react-stickynode-legacy.svg?branch=master)](https://travis-ci.org/xemlock/react-stickynode-legacy)
+[![Coverage Status](https://coveralls.io/repos/xemlock/react-stickynode-legacy/badge.svg)](https://coveralls.io/r/xemlock/react-stickynode-legacy)
+[![Dependency Status](https://david-dm.org/xemlock/react-stickynode-legacy.svg)](https://david-dm.org/xemlock/react-stickynode-legacy)
+[![devDependency Status](https://david-dm.org/xemlock/react-stickynode-legacy/dev-status.svg)](https://david-dm.org/xemlock/react-stickynode-legacy#info=devDependencies)
 
 A performant and comprehensive React sticky component.
 
