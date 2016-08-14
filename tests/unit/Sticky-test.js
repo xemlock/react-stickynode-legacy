@@ -7,7 +7,7 @@
 'use strict';
 
 process.env.NODE_ENV = 'development';
-var jsx = require('jsx-test').jsxTranspile(process.env.COVERAGE);
+var jsx = require('../../../tests/jsx-test/index').jsxTranspile(process.env.COVERAGE);
 
 var ae;
 var ee = require('subscribe-ui-event/dist/globalVars').EE;
@@ -15,7 +15,7 @@ var expect = require('expect.js');
 var sinon = require('sinon');
 var inner;
 var outer;
-var ReactDOM = require('react-dom');
+var ReactDOM = require('react');
 var Sticky = require('../../../dist/Sticky');
 var sticky;
 
